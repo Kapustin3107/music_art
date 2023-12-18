@@ -1,0 +1,154 @@
+
+.main-block{
+    position: relative;
+    padding: 20px;
+    min-height: 100vh;
+    background: url("../../img/main-mob.webp") no-repeat center center;
+    background-size: cover;
+    background-position: top 0 center;
+    color: v(light);
+
+
+    .container-fluid{
+        height: 100%;
+        position: relative;
+        flex-grow: 1;
+        z-index: 2;
+    }
+
+    &:before,
+    &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.40) 1.16%, rgba(0, 0, 0, 0.08) 31.59%);
+        z-index: 1;
+    }
+}
+
+.main-block-wrapper{
+    flex-grow: 1;
+}
+
+.main-logo{
+    padding: 0;
+    h1{
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 400;
+        font-family: "Snickles";
+        transform: rotate(-10deg);
+        line-height: 97.727%;
+    }
+}
+
+.main-sidebar {
+    padding: 0;
+}
+
+.sidebar-menu{
+    margin: 0 0 40px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.44px;
+    font-weight: 500;
+    text-align: right;
+    a{
+        transition: all 0.3s;
+    }
+    a:hover{
+        color: v(accent);
+    }
+}
+
+.sidebar-socials{
+    margin-left: auto;
+    width: 100%;
+    max-width: 156px;
+    font-size: 0px;
+    a{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        &:hover svg{
+            fill: v(accent);
+        }
+    }
+}
+
+.main-footer{
+    padding: 0 20px;
+    margin-top: auto;
+}
+
+.footer-subscription{
+    label{
+        margin-bottom: 16px;
+    }
+    input{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        color: v(light);
+        border-bottom: 1px solid #7E7E92;
+        transition: all 0.3s;
+        &:focus{
+            outline: none;
+            border-bottom: 1px solid v(light);
+        }
+    }
+}
+
+.footer-copyrights{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: v(gray-text);
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+
+    span:last-child{
+        margin-top: 2px;
+        display: block;
+    }
+}
+
+.footer-highlight{
+    color: v(light);
+}
+
+@media(min-width: 768px){
+    .main-block{
+        padding: 40px 60px;
+        background-image: url("../../img/main.webp");
+        background-attachment: fixed;
+    }
+
+    .main-logo{
+        h1{
+            font-size: 44px;
+            line-height: 43px;
+        }
+    }
+
+    .main-sidebar-menu{
+        margin: auto 0;
+    }
+
+    .footer-subscription {
+        padding: 0;
+        max-width: 280px;
+    }
+
+    .footer-copyrights{
+        margin-left: auto;
+        padding: 0;
+        text-align: right;
+    }
+}
+

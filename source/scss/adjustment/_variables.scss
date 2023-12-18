@@ -1,0 +1,85 @@
+@import "./function";
+
+/* Basic variables */
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$media_queries: (
+  "tablet": (
+    min-width: $md,
+  ),
+  "desktop": (
+    min-width: $lg,
+  ),
+  "desktop-xl": (
+    min-width: $xl,
+  ),
+  "landscape": (
+    orientation: landscape,
+  ),
+  "portrait": (
+    orientation: portrait,
+  ),
+);
+
+// Colors
+$colors: (
+  "primary": #1B75BB,
+  "accent": #EC6032,
+  "header": #18181E,
+  "success": #15DAAB,
+  "danger": #FF5468,
+  "warning": #FEC01A,
+  "dark": #000000,
+  "light": #ffffff,
+  "text_color": #081F32,
+  "gray-text": #7E7E92,
+);
+
+$typography: (
+  "font-family": #{"Montserrat",
+  "Tahoma",
+  "Helvetica",
+  "Arial",
+  sans-serif},
+  "line-height": 1.2,
+  "title-size": 24px,
+  "font-size": 16px,
+  "small-font-size": 12px
+);
+
+$sizes: (
+  "gap": 10px,
+  "offset": 20px,
+  "radius": 10px,
+  "container-width": 1220px,
+  "easing": all 0.2s cubic-bezier(0.39, 0, 0.17, 0.99),
+  "shadow": 0px 20px 30px rgba(194, 220, 239, 0.4),
+);
+
+// Animations
+$transition-time: 0.4s !default;
+$transition-ease: cubic-bezier(0.16, 1, 0.3, 1) !default;
+
+
+/* Root */
+:root {
+  /* Colors */
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+    --#{$key}-rgb: #{HexToRGB($value)};
+  }
+
+  /* Typography */
+  @each $key, $value in $typography {
+    --#{$key}: #{$value};
+  }
+
+  /* Other */
+  @each $key, $value in $sizes {
+    --#{$key}: #{$value};
+  }
+}

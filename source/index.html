@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+        <title>Sumanth music</title>
+        <style>
+            .main-block{
+                position: relative;
+                padding: 20px;
+                min-height: 100vh;
+                background: url("../../img/main-mob.webp") no-repeat center center;
+                background-size: cover;
+                background-position: top 0 center;
+                color: v(light);
+            }
+
+            .main-block:before,
+            .main-block:after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(270deg, rgba(0, 0, 0, 0.40) 1.16%, rgba(0, 0, 0, 0.08) 31.59%);
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .main-block .container-fluid{
+                height: 100%;
+                position: relative;
+                flex-grow: 1;
+                z-index: 2;
+            }
+
+            .main-block-wrapper{
+                flex-grow: 1;
+            }
+
+            .main-logo{
+                transition: all 0.5s;
+                transform: translateX(-100%);
+                padding: 0;
+            }
+
+            .main-logo.is-visible{
+                transform: none;
+            }
+
+            .main-logo h1{
+                display: inline-block;
+                font-size: 22px;
+                font-weight: 400;
+                font-family: "Snickles";
+                transform: rotate(-10deg);
+                line-height: 97.727%;
+            }
+
+            .main-sidebar {
+                padding: 0;
+                transition: all 0.5s;
+                transform: translateX(100%);
+            }
+
+            .main-sidebar.is-visible{
+                transform: none;
+            }
+
+            .sidebar-menu{
+                margin: 0 0 40px 0;
+                font-size: 24px;
+                text-transform: uppercase;
+                letter-spacing: 1.44px;
+                font-weight: 500;
+                text-align: right;
+            }
+
+            .sidebar-menu a{
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .sidebar-menu a:hover{
+                color: #EC6032;
+            }
+
+            .sidebar-socials{
+                margin-left: auto;
+                width: 100%;
+                max-width: 156px;
+                font-size: 0px;
+            }
+
+            .sidebar-socials a{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .sidebar-socials a:hover{
+                transform: scale(1.1);
+            }
+
+            .main-footer{
+                padding: 0 20px;
+                margin-top: auto;
+            }
+
+            .footer-subscription form{
+                position: relative;
+            }
+
+            .footer-subscription label{
+                margin-bottom: 16px;
+            }
+
+            .footer-subscription input{
+                width: 100%;
+                padding-bottom: 10px;
+                padding-right: 30px;
+                color: #ffffff;
+                border-bottom: 1px solid #7E7E92;
+                transition: all 0.3s;
+            }
+
+            .footer-subscription input:focus{
+                outline: none;
+                border-bottom: 1px solid #ffffff;
+            }
+
+            .footer-subscription button[type="submit"]{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 24px;
+                height: 24px;
+                font-size: 0px;
+                transition: all 0.3s;
+            }
+
+            .footer-subscription button[type="submit"]:hover{
+                transform: scale(1.4);
+            }
+
+            .footer-copyrights{
+                margin-top: 40px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+                color: #7E7E92;
+                text-transform: uppercase;
+                letter-spacing: 1.12px;
+            }
+
+            .footer-copyrights span:last-child{
+                margin-top: 2px;
+                display: block;
+            }
+
+            .footer-highlight{
+                color: v(light);
+            }
+
+            @media(min-width: 768px){
+                .main-block{
+                    padding: 40px 60px;
+                    background-image: url("../../img/main.webp");
+                    background-attachment: fixed;
+                }
+
+                .main-block:before,
+                .main-block:after{
+                    position: fixed;
+                    width: 20vw;
+                }
+
+                .main-block:before{
+                    right: auto;
+                    background: linear-gradient(90deg, rgba(0,0,0,0.4584427521008403) 0%, rgba(9,9,121,0) 100%);
+                }
+
+                .main-block:after{
+                    left: auto;
+                    right: 0;
+                    background: linear-gradient(90deg, rgba(9,9,121,0) 0%, rgba(0,0,0,0.4584427521008403) 100%);
+                }
+
+                .main-block .main-wrapper{
+                    padding: 40px 60px;
+                    height: auto;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    pointer-events: none;   
+                }
+
+                .main-logo h1{
+                    font-size: 44px;
+                    line-height: 43px;
+                }
+
+                .main-sidebar-menu{
+                    margin: auto 0;
+                }
+
+                .main-block .footer-subscription{
+                    padding: 0;
+                    max-width: 280px;
+                }
+
+                .sidebar-menu a,
+                .sidebar-socials a,
+                .main-footer{
+                   pointer-events: auto;
+                }
+
+                .footer-copyrights{
+                    margin-left: auto;
+                    padding: 0;
+                    text-align: right;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="./css/style.css" />
+
+    </head>
+
+    <body class="page-body">
+        <div class="page-wrapper">
+
+            <main class="main-block d-flex flex-column">
+                <div class="container-fluid d-flex flex-column main-wrapper">
+
+                    <div class="row main-block-wrapper">
+                        <!-- logo start -->
+                        <div class="main-logo col-6 animated-top">
+                            <h1>Sumanth <br>
+                                music.</h1>
+                        </div>
+                        <!-- logo ends -->
+
+                        <!-- menu sidebar start -->
+                        <div class="main-sidebar col-6 d-flex flex-column flex-md-column-reverse animated-top">
+                            <nav class="main-sidebar-menu">
+                                <ul class="sidebar-menu">
+                                    <li><a href="#music">Music</a></li>
+                                    <li><a href="#videos">Videos</a></li>
+                                    <li><a href="#photos">Photos</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#about">About me</a></li>
+                                </ul>
+                            </nav>
+                            <ul class="sidebar-socials d-flex justify-content-between">
+                                <li>
+                                    <a class="d-flex justify-content-center align-items-center" href="#">
+                                        Facebook
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2H7ZM12.7936 12.0001H14.6825L14.9047 9.46037H12.9523V8.50799C12.9523 8.01593 13.2539 7.87307 13.4762 7.87307H14.8571V5.76196H12.9047C10.7619 5.76196 10.2539 7.36514 10.2539 8.38101V9.46037H9.14282V12.0001H10.4127V18.1905H12.7936V12.0001Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex justify-content-center align-items-center" href="#">
+                                        Instagram
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" fill="white"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 7C2 4.23858 4.23858 2 7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7ZM12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17ZM18 7.5C18.8284 7.5 19.5 6.82843 19.5 6C19.5 5.17157 18.8284 4.5 18 4.5C17.1716 4.5 16.5 5.17157 16.5 6C16.5 6.82843 17.1716 7.5 18 7.5Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex justify-content-center align-items-center" href="#">
+                                    Twitter
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 7C2 4.23858 4.23858 2 7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7ZM18.7128 7.19611C18.5126 7.82249 18.0872 8.34813 17.5335 8.68009C18.076 8.61526 18.593 8.47108 19.074 8.25774C18.7144 8.79564 18.2597 9.26804 17.7356 9.64622C17.7408 9.76128 17.7434 9.87696 17.7434 9.99324C17.7434 13.5378 15.0454 17.625 10.1117 17.625C8.59696 17.625 7.18704 17.1809 6 16.4198C6.20984 16.4446 6.42334 16.4574 6.63985 16.4574C7.89656 16.4574 9.05312 16.0286 9.97111 15.3091C8.79735 15.2875 7.80677 14.5119 7.46543 13.4464C7.62924 13.4776 7.79727 13.4945 7.97011 13.4945C8.21473 13.4945 8.4517 13.4617 8.67676 13.4004C7.44972 13.1539 6.52513 12.0699 6.52513 10.7703C6.52513 10.7589 6.52513 10.7477 6.52539 10.7365C6.88699 10.9374 7.30064 11.0581 7.74029 11.0721C7.02054 10.591 6.54702 9.77003 6.54702 8.83943C6.54702 8.34785 6.6793 7.88709 6.9102 7.49094C8.23311 9.11377 10.2096 10.1816 12.4388 10.2935C12.3931 10.0972 12.3693 9.89244 12.3693 9.68222C12.3693 8.20092 13.5704 7 15.0517 7C15.8232 7 16.5203 7.3257 17.0095 7.847C17.6205 7.72674 18.1945 7.50352 18.7128 7.19611Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-flex justify-content-center align-items-center" href="#">
+                                        Youtube
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 5C8.077 5 4.155 5.3 3.293 5.901C1.569 7.103 1.569 16.838 3.293 18.039C5.017 19.241 18.983 19.241 20.707 18.039C22.432 16.838 22.432 7.102 20.707 5.901C19.846 5.3 15.922 5 12 5ZM10.011 9.056L15.059 11.971L10.011 14.886V9.056Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- menu sidebar start -->
+
+
+                    </div>
+                   
+
+                   
+
+                     <!-- main footer start -->
+                    <footer class="main-footer row">
+                        <div class="footer-subscription col-12 col-md-6">
+                            <form action="#" method="post">
+                                <label for="subscription">Subscribe to mailing list</label>
+                                <input type="text" id="subscription" name="subscription" placeholder="Enter your email">
+
+                                <button type="submit">Submit
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289L20.7071 11.2929C20.7356 11.3214 20.7623 11.3515 20.7872 11.3833C20.7927 11.3902 20.7982 11.3974 20.8037 11.4047C20.8215 11.4289 20.8383 11.4537 20.8539 11.4793C20.8614 11.4914 20.8685 11.5036 20.8753 11.5159C20.8862 11.5357 20.8966 11.5561 20.9063 11.5769C20.9143 11.5939 20.9218 11.6112 20.9288 11.6287C20.9367 11.6484 20.9439 11.6682 20.9505 11.6883C20.9553 11.7031 20.9599 11.7185 20.9642 11.734C20.9702 11.7556 20.9754 11.7773 20.9798 11.7992C20.9833 11.8166 20.9864 11.8341 20.989 11.8515C20.9962 11.8996 21 11.9494 21 12L20.9964 11.9148C20.9979 11.9321 20.9989 11.9494 20.9995 11.9668L21 12C21 12.0111 20.9998 12.0222 20.9995 12.0332C20.9989 12.0503 20.9978 12.0683 20.9963 12.0862C20.9945 12.1079 20.992 12.1285 20.989 12.149C20.9864 12.1659 20.9833 12.1834 20.9798 12.2007C20.9754 12.2227 20.9702 12.2444 20.9643 12.2658C20.9599 12.2815 20.9553 12.2969 20.9503 12.3121C20.9439 12.3318 20.9367 12.3516 20.9289 12.3711C20.9218 12.3888 20.9143 12.4061 20.9063 12.4232C20.8966 12.4439 20.8862 12.4643 20.8751 12.4843C20.8685 12.4964 20.8614 12.5086 20.854 12.5207C20.8383 12.5463 20.8215 12.5711 20.8037 12.5952C20.7747 12.6343 20.7425 12.6717 20.7071 12.7071L20.7872 12.6167C20.7849 12.6197 20.7826 12.6226 20.7803 12.6254L20.7071 12.7071L14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071C12.9024 18.3166 12.9024 17.6834 13.2929 17.2929L17.585 12.999L4 13C3.48716 13 3.06449 12.614 3.00673 12.1166L3 12C3 11.4477 3.44772 11 4 11L17.585 10.999L13.2929 6.70711C12.9324 6.34662 12.9047 5.77939 13.2097 5.3871L13.2929 5.29289Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="footer-copyrights col-12 col-md-6">
+                            <p>© 2024 <span class="footer-highlight">Sumanth music.</span>
+                                <span>built by 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="16" viewBox="0 0 46 16" fill="none">
+                                        <path d="M4.4333 3.46233H6.46271L11.0289 12.7605H9.0176L8.26261 11.1959H2.74816L2.01733 12.7605H0L4.4333 3.46233ZM7.50762 9.64327L5.46612 5.41953L3.47899 9.64327H7.50762Z" fill="white"/>
+                                        <path d="M11.9409 8.08465C11.9409 7.38268 12.0718 6.74019 12.3335 6.1572C12.5952 5.5742 12.9617 5.07449 13.4328 4.65807C13.9079 4.23767 14.4757 3.91247 15.136 3.68244C15.8004 3.45242 16.5353 3.3374 17.3406 3.3374C18.1419 3.3374 18.8747 3.45242 19.5391 3.68244C20.2035 3.91247 20.7713 4.23767 21.2424 4.65807C21.7175 5.07449 22.086 5.5742 22.3477 6.1572C22.6094 6.74019 22.7403 7.38268 22.7403 8.08465C22.7403 8.79059 22.6094 9.43902 22.3477 10.03C22.086 10.6169 21.7175 11.1226 21.2424 11.5469C20.7713 11.9713 20.2035 12.3024 19.5391 12.5404C18.8747 12.7744 18.1419 12.8914 17.3406 12.8914C16.5353 12.8914 15.8004 12.7744 15.136 12.5404C14.4757 12.3024 13.9079 11.9713 13.4328 11.5469C12.9617 11.1226 12.5952 10.6169 12.3335 10.03C12.0718 9.43902 11.9409 8.79059 11.9409 8.08465ZM13.8556 8.08465C13.8556 8.56453 13.9421 8.99682 14.1153 9.38152C14.2925 9.76622 14.5361 10.0954 14.8461 10.369C15.1602 10.6387 15.5286 10.8469 15.9514 10.9937C16.3782 11.1404 16.8413 11.2138 17.3406 11.2138C17.8399 11.2138 18.3009 11.1404 18.7237 10.9937C19.1506 10.8469 19.519 10.6387 19.829 10.369C20.1391 10.0954 20.3827 9.76622 20.5599 9.38152C20.737 8.99682 20.8256 8.56453 20.8256 8.08465C20.8256 7.60477 20.737 7.17446 20.5599 6.79373C20.3827 6.413 20.1391 6.09176 19.829 5.83001C19.519 5.56429 19.1506 5.36202 18.7237 5.22321C18.3009 5.08441 17.8399 5.015 17.3406 5.015C16.8413 5.015 16.3782 5.08441 15.9514 5.22321C15.5286 5.36202 15.1602 5.56429 14.8461 5.83001C14.5361 6.09176 14.2925 6.413 14.1153 6.79373C13.9421 7.17446 13.8556 7.60477 13.8556 8.08465Z" fill="white"/>
+                                        <path d="M24.8663 3.46233H29.6681C30.3929 3.46233 31.021 3.53768 31.5525 3.68839C32.084 3.83513 32.525 4.04929 32.8753 4.33087C33.2256 4.61246 33.4853 4.95551 33.6544 5.36004C33.8276 5.76457 33.9141 6.22264 33.9141 6.73424C33.9141 7.07928 33.8718 7.40846 33.7873 7.72177C33.7027 8.03111 33.5719 8.31666 33.3947 8.57841C33.2216 8.84017 33.0021 9.07416 32.7363 9.28039C32.4706 9.48265 32.1585 9.6512 31.8002 9.78605L33.8537 12.7605H31.5102L29.7345 10.1192H29.6801L26.781 10.1132V12.7605H24.8663V3.46233ZM29.7164 8.48323C30.0788 8.48323 30.3949 8.44159 30.6647 8.3583C30.9385 8.27502 31.166 8.15802 31.3472 8.00732C31.5324 7.85661 31.6693 7.67417 31.7579 7.46001C31.8505 7.24189 31.8968 6.99996 31.8968 6.73424C31.8968 6.2147 31.7156 5.81414 31.3532 5.53256C30.9908 5.24701 30.4452 5.10424 29.7164 5.10424H26.781V8.48323H29.7164Z" fill="white"/>
+                                        <path d="M39.4044 3.46233H41.4338L46 12.7605H43.9887L43.2337 11.1959H37.7193L36.9884 12.7605H34.9711L39.4044 3.46233ZM42.4787 9.64327L40.4372 5.41953L38.4501 9.64327H42.4787Z" fill="white"/>
+                                        <path d="M12.8848 13.5854L17.2268 14.0922L21.5687 13.5854V15.1561L17.2268 15.6628L12.8848 15.1561V13.5854Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </p>
+                        </div>
+                    </footer>
+                    <!-- main footer end -->
+                </div>
+            </main>
+
+            <section class="music-section" id="music">
+                <div class="music-section-wrapper container">
+
+                    <ul class="music-list">
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-1.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-2.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-3.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-4.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-5.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-6.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-7.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-8.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-9.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-10.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-11.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="music-item">
+                            <div class="music-item-cover">
+                                <img src="./img/cover-12.webp" width="320" height="320" alt="poster 1" loading="lazy">
+                            </div>
+                            <ul class="music-item-list d-flex align-items-center">
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon spotify f-flex align-items-center">
+                                            <img src="./img/spotify-icon.png" width="20" height="20" alt="spotify icon">
+                                        </div>
+                                        <span>Spotify</span>
+                                    </a>
+                                </li>
+                                <li class="music-item-link">
+                                    <a href="#" class="d-flex">
+                                        <div class="musik-link-icon apple f-flex align-items-center">
+                                            <img src="./img/apple-icon.png" width="20" height="20" alt="apple music icon">
+                                        </div>
+                                       <span>Music</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="videos-section" id="videos">
+
+                <div class="space"></div>
+
+                <div class="container">
+                    <h2 class="section-title">Watch the phone</h2>
+
+                    <!-- video slider start -->
+                    <div class="swiper mySwiper video-slider">
+                        <div class="swiper-wrapper video-slider-wrapper">
+
+                            <div class="swiper-slide video-slide">
+                                <div class="video-slide-inner">
+                                    <img class="playButton" src="./img/play.svg" width="30" height="30" alt="play">
+                                    <img class="video-poster" src="./img/video-poster.webp" alt="video poster">
+                                </div>
+                            </div>
+                            <div class="swiper-slide video-slide">
+                                <div class="video-slide-inner">
+                                    <img class="playButton" src="./img/play.svg" width="30" height="30" alt="play">
+                                    <img class="video-poster" src="./img/video-poster.webp" alt="video poster">
+                                </div>
+                            </div>
+                            <div class="swiper-slide video-slide">
+                                <div class="video-slide-inner">
+                                    <img class="playButton" src="./img/play.svg" width="30" height="30" alt="play">
+                                    <img class="video-poster" src="./img/video-poster.webp" alt="video poster">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-button-next slider-next-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="24" viewBox="0 0 46 24" fill="none">
+                                <path d="M39.8753 13.0001H2V11.0001H39.8753L32.0488 3.70718L33.5665 2.29297L43.9839 12.0001L33.5665 21.7072L32.0488 20.293L39.8753 13.0001Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-prev slider-prev-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="24" viewBox="0 0 46 24" fill="none">
+                                <path d="M6.12468 13.0001H44V11.0001H6.12471L13.9512 3.70718L12.4335 2.29297L2.01614 12.0001L12.4335 21.7072L13.9512 20.293L6.12468 13.0001Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination slider-pagination"></div>
+                    <!-- video slider end -->
+                    </div>
+            </section>
+
+            <section class="photo-section" id="photos">
+                <div class="container-fluid">
+                    <ul class="photo-list">
+                        <li><img src="./img/gallery-1.webp" width="393" height="250" alt="photo-1" loading="lazy"></li>
+                        <li><img src="./img/gallery-2.webp" width="393" height="250" alt="photo-1" loading="lazy"></li>
+                        <li><img src="./img/gallery-3.webp" width="393" height="250" alt="photo-1" loading="lazy"></li>
+                        <li><img src="./img/gallery-4.webp" width="393" height="250" alt="photo-1" loading="lazy"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contact-section d-md-flex align-items-center" id="contact">
+
+                <div id="trigger1" class="spacer s0"></div>
+
+
+                <div class="container" id="reveal1">
+                    <div class="row">
+
+                        <div class="contact-title col-12 col-md-3">
+                            <h2>
+                                <span>Let`s</span>
+                                <span>Talk</span>
+                            </h2>
+                        </div>
+
+                        <ul class="contact-list col-12 col-md-9">
+                            <li class="contact-item d-flex flex-column">
+                                <span>Call us:</span>
+                                <a href="tellto:+619-999-9999" >+619-999-9999</a>
+                            </li>
+    
+                            <li class="contact-item d-flex flex-column">
+                                <span>Our adress:</span>
+                                <a href="#">Jameson street 7, Australia</a>
+                            </li>
+    
+                            <li class="contact-item d-flex flex-column">
+                                <span>Send us email:</span>
+                                <a href="mailto:summerboy@gmail.com" >summerboy@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section d-md-flex align-items-center" id="about">
+
+                <div id="trigger2"></div>
+                <div class="container" id="reveal2">
+                    <h2 class="about-title">Hello There!</h2>
+
+                    <div class="about-text">
+                        <h4>I`m Sumanth</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur. Vestibulum imperdiet dictum congue ultrices erat amet scelerisque. Eget habitant sit augue pharetra egestas lectus diam etiam. Etiam viverra quam turpis orci arcu leo. Arcu id non dolor viverra amet tortor pellentesque mi tortor. Ipsum et quam scelerisque fusce. Faucibus ipsum pulvinar morbi facilisis vulputate. Mattis id eros nulla orci enim. Est ac ultrices augue lacus at. Sed eget laoreet nascetur ut neque amet faucibus viverra blandit.</p>
+                    </div>
+                   
+                </div>
+
+
+            </section>
+        </div>
+
+        <script src="./js/swiper.js"></script>
+        <script src="./js/ScrollMagic.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

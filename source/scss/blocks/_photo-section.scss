@@ -1,0 +1,40 @@
+.photo-section{
+    .container-fluid{
+        padding: 0;
+    }
+}
+
+.photo-list{
+    li{
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 1.16%, rgba(0, 0, 0, 0.08) 31.59%);
+        }
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@include breakpoint(desktop){
+    .photo-list{
+       
+        li{
+            height: 100vh;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

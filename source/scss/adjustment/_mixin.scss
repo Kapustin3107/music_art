@@ -1,0 +1,18 @@
+@mixin breakpoint($breakpoints) {
+  $conditions: ();
+  @each $breakpoint in $breakpoints {
+    $conditions: append(
+    $conditions,
+    #{inspect(map-get($media_queries, $breakpoint))},
+    comma
+    );
+  }
+
+  @media #{$conditions} {
+    @content;
+  }
+}
+
+@mixin transition($x...) {
+  transition: $x $transition-time $transition-ease;
+}

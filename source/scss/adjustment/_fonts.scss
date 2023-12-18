@@ -1,0 +1,35 @@
+/* Fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Light.woff") format("woff"), url("Poppins-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.woff") format("woff"), url("Poppins-Regular.woff2") format("woff2");
+    font-weight: regular;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff") format("woff"), url("Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-ExtraBold.woff") format("woff"), url("Poppins-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Snickles";
+  src: url("../fonts/Snickles.woff") format("woff"), url("Snickles.woff") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}

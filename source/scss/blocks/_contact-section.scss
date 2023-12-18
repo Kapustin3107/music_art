@@ -1,0 +1,55 @@
+.contact-section{
+    padding: 100px 0;
+    .container{
+        padding: 100px 36px 0 36px;
+        background: url("../../img/contact-bg-mob.webp") no-repeat top 20% center ;
+        background-size: 100%;
+    }
+}
+
+.contact-title{
+    span{
+        display: block;
+    }
+    span:first-child{
+        font-size: 47.419px;
+        font-weight: 800;
+        letter-spacing: 2.845px;
+        text-transform: uppercase;
+        line-height: 67.742px; 
+    }
+    span:nth-child(2){
+        margin-top: -20px;
+        font-family: Snickles;
+        font-size: 140px;
+        color: v(accent);
+    }
+}
+
+.contact-item{
+    margin-bottom: 40px;
+
+    span{
+        margin-bottom: 10px;
+    }
+
+    a{
+        font-size: 14px;
+        color: var(--gray-text, #7E7E92);
+    }
+}
+
+@media(min-width: 768px){
+    .contact-section{
+        min-height: 100vh;
+        background: url("../../img/contact-bg-web.webp") no-repeat;
+        background-size: 100%;
+        background-position: center;
+        .container{
+            background: transparent;
+        }
+        .container{
+            padding: 50px 0;
+        }
+    }
+}

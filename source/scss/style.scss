@@ -1,0 +1,41 @@
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+@import "./adjustment/function";
+@import "./adjustment/variables";
+@import "./adjustment/mixin";
+
+/*------------------------------------*\
+  #BOOTSTRAP
+\*------------------------------------*/
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./adjustment/swiper";
+
+/*------------------------------------*\
+  #NORMALIZE
+\*------------------------------------*/
+
+@import "./adjustment/normalize";
+
+/*-----------------------f-------------*\
+  #FONTS
+\*------------------------------------*/
+
+@import "./adjustment/fonts";
+@import "./adjustment/typography";
+
+/*------------------------------------*\
+  #BLOCKS
+\*------------------------------------*/
+
+@import "./blocks/page";
+// @import "./blocks/main";
+@import "./blocks/music-section";
+@import "./blocks/videos-section";
+@import "./blocks/photo-section";
+@import "./blocks/contact-section";
+@import "./blocks/about-section";
+/*------------------------------------*\
+  #OTHER
+\*------------------------------------*/

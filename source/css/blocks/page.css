@@ -1,0 +1,5 @@
+body {
+  font: 400 16px/1.5 "Gelasio", "Arial", serif;
+  background: v(light);
+  text-rendering: optimizeSpeed;
+}

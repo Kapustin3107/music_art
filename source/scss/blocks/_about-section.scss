@@ -1,0 +1,35 @@
+.about-section{
+    padding: 100px 0;
+    background: url("../../img/about-bg-mob.webp") no-repeat;
+    background-size: 100%;
+    background-size: 100%;
+    .container{
+        max-width: 700px;
+        padding: 0 36px;
+    }
+}
+
+.about-title{
+    margin-bottom: 40px;
+    font-family: Snickles;
+    font-size: 140px;
+    line-height: 130px;
+    letter-spacing: 8.4px;
+}
+
+.about-text{
+    line-height: 1.75;
+    h4{
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+@media(min-width: 768px){
+    .about-section{
+        background: url("../../img/about-bg-web.webp") no-repeat;
+        background-size: contain;
+        min-height: 100vh;
+    }
+}
